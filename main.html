@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Your name]</title>
+<meta name="description" content="One page. Typed.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --desk:   #d6d3ca;
+    --paper:  #fcfbf8;
+    --ink:    #35322c;
+    --faded:  #6f6b62;
+    --ribbon: #9e3427;
+    --measure: 62ch;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--desk);
+    color: var(--ink);
+    font-family: "Courier Prime", "Courier New", ui-monospace, monospace;
+    font-size: 17px;
+    line-height: 1.85;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+  }
+
+  .sheet {
+    background: var(--paper);
+    width: 100%;
+    max-width: calc(var(--measure) + 12rem);
+    padding: 5rem 6rem 3rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,.10), 0 14px 40px rgba(0,0,0,.10);
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 6rem);
+  }
+
+  .typed { max-width: var(--measure); }
+
+  /* Typed pages are never justified — ragged right is the point. */
+  p { text-align: left; margin: 0 0 1.85rem; }
+
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    line-height: 1.4;
+    margin: 0 0 .4rem;
+    /* faint ink bleed, the way a ribbon strike spreads into paper */
+    text-shadow: 0 0 .7px currentColor;
+  }
+
+  .dateline {
+    color: var(--faded);
+    margin: 0 0 3rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    margin: 0 0 .4rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: .22em;
+    text-decoration-thickness: 1px;
+  }
+  a:hover { color: var(--ribbon); }
+  a:focus-visible {
+    outline: 2px solid var(--ribbon);
+    outline-offset: 3px;
+    text-decoration: none;
+  }
+
+  /* A typist rules a line by holding down the hyphen key. */
+  .rule {
+    color: var(--faded);
+    letter-spacing: .18em;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+    margin: 1rem 0 1.6rem;
+  }
+
+  footer { margin-top: auto; padding-top: 3rem; }
+
+  .links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .2rem 2.5rem;
+  }
+  .links a { color: var(--ribbon); }
+  .links a:hover { color: var(--ink); }
+
+  .colophon {
+    color: var(--faded);
+    font-size: .85rem;
+    margin: 1.6rem 0 0;
+  }
+
+  @media (max-width: 640px) {
+    body { padding: 0; background: var(--paper); }
+    .sheet {
+      padding: 3rem 1.6rem 2rem;
+      box-shadow: none;
+      min-height: 100vh;
+    }
+    .links { gap: .2rem 1.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<main class="sheet">
+
+  <!-- Replace everything between here and the footer with your own copy. -->
+  <div class="typed">
+    <h1>[Your name]</h1>
+    <p class="dateline">Amsterdam</p>
+
+    <p>
+      I design and build small, careful things for the web. Most of my
+      work is quiet: interfaces that stay out of the way, tools that do
+      one job, pages that load before you notice them loading.
+    </p>
+
+    <p>
+      Right now I'm working on a reading tool for people with too many
+      open tabs, and taking on one or two projects a year for people I
+      like.
+    </p>
+
+    <h2>Selected work</h2>
+    <p>
+      <a href="#">Marginalia</a> — a reader that keeps your notes<br>
+      <a href="#">Ledger</a> — bookkeeping for freelancers<br>
+      <a href="#">Field Guide</a> — an essay on slow software
+    </p>
+  </div>
+
+  <footer>
+    <p class="rule" aria-hidden="true">--------------------------------------------------------------------------------------------------</p>
+
+    <ul class="links">
+      <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Writing</a></li>
+      <li><a href="https://github.com/" rel="me">GitHub</a></li>
+    </ul>
+
+    <p class="colophon">Set in Courier Prime. No trackers, no cookies.</p>
+  </footer>
+
+</main>
+
+</body>
+</html>
