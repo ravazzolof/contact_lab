@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>[Your name]</title>
-<meta name="description" content="One page. Typed.">
+<title>CLAB — the Contact LAB, Amsterdam</title>
+<meta name="description" content="A laboratory for research on contact improvisation. Amsterdam, 2026.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +17,9 @@
     --ink:    #35322c;
     --faded:  #6f6b62;
     --ribbon: #9e3427;
-    --measure: 62ch;
   }
 
   *, *::before, *::after { box-sizing: border-box; }
-
   html { -webkit-text-size-adjust: 100%; }
 
   body {
@@ -30,7 +28,7 @@
     color: var(--ink);
     font-family: "Courier Prime", "Courier New", ui-monospace, monospace;
     font-size: 17px;
-    line-height: 1.85;
+    line-height: 1.9;
     display: flex;
     justify-content: center;
     padding: 3rem 1rem;
@@ -39,65 +37,83 @@
   .sheet {
     background: var(--paper);
     width: 100%;
-    max-width: calc(var(--measure) + 12rem);
-    padding: 5rem 6rem 3rem;
+    max-width: 46rem;
+    padding: 5rem 5.5rem 3rem;
     box-shadow: 0 1px 2px rgba(0,0,0,.10), 0 14px 40px rgba(0,0,0,.10);
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 6rem);
   }
 
-  .typed { max-width: var(--measure); }
-
   /* Typed pages are never justified — ragged right is the point. */
-  p { text-align: left; margin: 0 0 1.85rem; }
+  p { text-align: left; margin: 0 0 1.9rem; }
 
   h1 {
-    font-size: 1.6rem;
+    font-size: 1.55rem;
     font-weight: 700;
-    letter-spacing: .06em;
+    letter-spacing: .05em;
     line-height: 1.4;
-    margin: 0 0 .4rem;
-    /* faint ink bleed, the way a ribbon strike spreads into paper */
-    text-shadow: 0 0 .7px currentColor;
+    margin: 0 0 .3rem;
+    text-shadow: 0 0 .7px currentColor; /* faint ink bleed into paper */
   }
 
-  .dateline {
+  .dateline { color: var(--faded); margin: 0 0 3.5rem; }
+
+  /* Each stanza ends in an ellipsis: the research is ongoing. */
+  .stanza { margin: 0 0 .4rem; }
+  .cont {
     color: var(--faded);
-    margin: 0 0 3rem;
+    margin: 0 0 1.9rem;
+    user-select: none;
   }
 
-  h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: .04em;
-    margin: 0 0 .4rem;
+  /* A rule with a point of contact in the middle. */
+  .rule {
+    display: flex;
+    align-items: center;
+    gap: .8em;
+    color: var(--faded);
+    margin: 3rem 0;
+    user-select: none;
   }
+  .rule span {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: .16em;
+  }
+  .rule span:first-child { text-align: right; }
+  .rule .dot { flex: none; overflow: visible; }
+
+  /* Below the rule: a note added at the foot of the page, typed lighter. */
+  .note {
+    font-size: .88em;
+    line-height: 1.85;
+    color: #85817a;
+  }
+  .note a { color: #a8655c; }
+  .note a:hover { color: var(--ink); }
+
+  .ask { margin: 0 0 .6rem; }
+
+  ol { margin: 0 0 1.9rem; padding-left: 2.4ch; }
+  li { margin-bottom: .2rem; }
 
   a {
-    color: inherit;
+    color: var(--ribbon);
     text-decoration: underline;
     text-underline-offset: .22em;
     text-decoration-thickness: 1px;
   }
-  a:hover { color: var(--ribbon); }
+  a:hover { color: var(--ink); }
   a:focus-visible {
     outline: 2px solid var(--ribbon);
     outline-offset: 3px;
     text-decoration: none;
   }
 
-  /* A typist rules a line by holding down the hyphen key. */
-  .rule {
-    color: var(--faded);
-    letter-spacing: .18em;
-    overflow: hidden;
-    white-space: nowrap;
-    user-select: none;
-    margin: 1rem 0 1.6rem;
-  }
-
-  footer { margin-top: auto; padding-top: 3rem; }
+  .note { margin-top: auto; }
+  footer { padding-top: 2.5rem; }
 
   .links {
     list-style: none;
@@ -107,8 +123,6 @@
     flex-wrap: wrap;
     gap: .2rem 2.5rem;
   }
-  .links a { color: var(--ribbon); }
-  .links a:hover { color: var(--ink); }
 
   .colophon {
     color: var(--faded);
@@ -116,13 +130,9 @@
     margin: 1.6rem 0 0;
   }
 
-  @media (max-width: 640px) {
-    body { padding: 0; background: var(--paper); }
-    .sheet {
-      padding: 3rem 1.6rem 2rem;
-      box-shadow: none;
-      min-height: 100vh;
-    }
+  @media (max-width: 700px) {
+    body { padding: 0; background: var(--paper); font-size: 15px; }
+    .sheet { padding: 3rem 1.5rem 2rem; box-shadow: none; min-height: 100vh; }
     .links { gap: .2rem 1.6rem; }
   }
 </style>
@@ -131,43 +141,84 @@
 
 <main class="sheet">
 
-  <!-- Replace everything between here and the footer with your own copy. -->
-  <div class="typed">
-    <h1>[Your name]</h1>
-    <p class="dateline">Amsterdam</p>
+  <h1>CLAB: the Contact LAB</h1>
+  <p class="dateline">Amsterdam, 2026</p>
 
-    <p>
-      I design and build small, careful things for the web. Most of my
-      work is quiet: interfaces that stay out of the way, tools that do
-      one job, pages that load before you notice them loading.
-    </p>
+  <p class="stanza">
+    A laboratory for research on contact improvisation.<br>
+    Together we define questions, design experiments<br>
+    and scores, observe, share, integrate and repeat
+  </p>
+  <p class="cont" aria-hidden="true">…</p>
 
-    <p>
-      Right now I'm working on a reading tool for people with too many
-      open tabs, and taking on one or two projects a year for people I
-      like.
-    </p>
+  <p class="stanza">
+    We research what is alive in us.<br>
+    Where does the movement come from?<br>
+    How does intention change breath?
+  </p>
+  <p class="cont" aria-hidden="true">…</p>
 
-    <h2>Selected work</h2>
-    <p>
-      <a href="#">Marginalia</a> — a reader that keeps your notes<br>
-      <a href="#">Ledger</a> — bookkeeping for freelancers<br>
-      <a href="#">Field Guide</a> — an essay on slow software
-    </p>
+  <p class="stanza">
+    We use all the tools available:<br>
+    our senses, limbs, organs, brains,<br>
+    but also objects, colors, lights, instruments
+  </p>
+  <p class="cont" aria-hidden="true">…</p>
+
+  <p class="stanza">
+    We welcome other practices of absorption:<br>
+    meditation, thai-chi, yoga, martial and visual arts,<br>
+    contemporary dance and theater, poetry, jazz
+  </p>
+  <p class="cont" aria-hidden="true">…</p>
+
+  <!-- Your draft was cut off here; I've guessed "as one". -->
+  <p class="stanza">
+    We are all both teachers and students,<br>
+    share responsibility for each other<br>
+    and progress together, as one
+  </p>
+  <p class="cont" aria-hidden="true">…</p>
+
+  <p class="stanza">
+    We are open, inquisitive, diverse bodies,<br>
+    drawn to deep collective psychological, social,<br>
+    and, why not, one day, political transformation.
+  </p>
+
+  <div class="rule" aria-hidden="true">
+    <span>------------------------------------------------------------</span>
+    <span class="dot">·</span>
+    <span>------------------------------------------------------------</span>
   </div>
 
-  <footer>
-    <p class="rule" aria-hidden="true">--------------------------------------------------------------------------------------------------</p>
+  <section class="note">
+    <p>
+      Does it resonate? Join us.<br>
+      <!-- CHECK THIS LINE — did you mean "No experience is required"? -->
+      Experience is required, but dedication and curiosity<br>
+      are most important.
+    </p>
 
-    <ul class="links">
-      <li><a href="mailto:hello@example.com">hello@example.com</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Writing</a></li>
-      <li><a href="https://github.com/" rel="me">GitHub</a></li>
-    </ul>
+    <p class="ask">
+      Send an email to
+      <a href="mailto:amsterdam.contact.lab@gmail.com">amsterdam.contact.lab@gmail.com</a>
+      with:
+    </p>
 
-    <p class="colophon">Set in Courier Prime. No trackers, no cookies.</p>
-  </footer>
+    <ol>
+      <li>who are you and where are you moving from</li>
+      <li>your experience in contact improvisation</li>
+      <li>what questions are you interested in</li>
+    </ol>
+
+    <footer>
+      <ul class="links">
+        <li><a href="mailto:amsterdam.contact.lab@gmail.com">amsterdam.contact.lab@gmail.com</a></li>
+      </ul>
+      <p class="colophon">Set in Courier Prime. No trackers, no cookies.</p>
+    </footer>
+  </section>
 
 </main>
 
