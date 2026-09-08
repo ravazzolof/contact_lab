@@ -58,7 +58,7 @@
     text-shadow: 0 0 .7px currentColor; /* faint ink bleed into paper */
   }
 
-  .logo { display: block; width: 300px; height: auto; margin: 0 0 .5rem -6px; }
+  .logo { display: block; width: 300px; max-width: 100%; height: auto; margin: 0 0 .5rem -6px; }
 
   .dateline {
     color: #8a867e;
@@ -143,7 +143,7 @@
   @media (max-width: 700px) {
     body { padding: 0; background: var(--paper); font-size: 15px; }
     .sheet { padding: 3rem 1.5rem 2rem; box-shadow: none; min-height: 100vh; }
-    .logo { width: 155px; }
+    .logo { width: 130px; }
     .links { gap: .2rem 1.6rem; }
   }
 </style>
@@ -152,7 +152,7 @@
 
 <main class="sheet">
 
-<img class="logo" src="logo_full.svg" alt="CLAB — the Amsterdam Contact Lab" style="width: 300px" width="400" height="149">
+<img class="logo" src="logo_full.svg" alt="CLAB — the Amsterdam Contact Lab" width="400" height="149">
   <h1 class="sr">CLAB: the Contact LAB</h1>
 
   <p class="stanza">
