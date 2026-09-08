@@ -6,6 +6,7 @@
 <title>CLAB — the Contact LAB, Amsterdam</title>
 <meta name="description" content="A laboratory for research on contact improvisation. Amsterdam, 2026.">
 
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -57,7 +58,14 @@
     text-shadow: 0 0 .7px currentColor; /* faint ink bleed into paper */
   }
 
-  .dateline { color: var(--faded); margin: 0 0 3.5rem; }
+  .logo { display: block; width: 190px; height: auto; margin: 0 0 .5rem -6px; }
+
+  .dateline {
+    color: #8a867e;
+    font-size: .8rem;
+    letter-spacing: .22em;
+    margin: 0 0 3.5rem 2px;
+  }
 
   /* Each stanza ends in an ellipsis: the research is ongoing. */
   .stanza { margin: 0 0 .4rem; }
@@ -112,6 +120,8 @@
     text-decoration: none;
   }
 
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
   .note { margin-top: auto; }
   footer { padding-top: 2.5rem; }
 
@@ -133,6 +143,7 @@
   @media (max-width: 700px) {
     body { padding: 0; background: var(--paper); font-size: 15px; }
     .sheet { padding: 3rem 1.5rem 2rem; box-shadow: none; min-height: 100vh; }
+    .logo { width: 155px; }
     .links { gap: .2rem 1.6rem; }
   }
 </style>
@@ -141,8 +152,9 @@
 
 <main class="sheet">
 
-  <h1>CLAB: the Contact LAB</h1>
-  <p class="dateline">Amsterdam, 2026</p>
+  <img class="logo" src="logo.svg" alt="CLAB — the Contact Lab" width="150" height="56">
+  <h1 class="sr">CLAB: the Contact LAB</h1>
+  <p class="dateline">Amsterdam Contact Lab</p>
 
   <p class="stanza">
     A laboratory for research on contact improvisation.<br>
