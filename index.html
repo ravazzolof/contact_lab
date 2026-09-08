@@ -80,24 +80,16 @@
     flex: 1;
     border-top: 1px solid currentColor;
   }
-  .rule .dot {
-    flex: none;
-    width: .34em;
-    height: .34em;
-    border-radius: 50%;
-    background: var(--ribbon);
-  }
+  /* Both marks carry their own size and color as SVG attributes, so they
+     stay small and red even somewhere this stylesheet doesn't reach. */
+  .rule .dot,
   .rule .spiral {
     flex: none;
     display: flex;
     align-items: center;
-    color: var(--ribbon);
   }
-  .rule .spiral svg {
-    display: block;
-    width: 1.15em;
-    height: 1.15em;
-  }
+  .rule .dot svg { display: block; width: .34em; height: .34em; }
+  .rule .spiral svg { display: block; width: 1.15em; height: 1.15em; }
   /* Below the rule: a note added at the foot of the page, typed lighter. */
   .note {
     font-size: .88em;
@@ -152,7 +144,7 @@
 
   <div class="rule" aria-hidden="true">
     <span class="line"></span>
-    <span class="dot"></span>
+    <span class="dot"><svg width="6" height="6" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="5" fill="#9e3427"/></svg></span>
     <span class="line"></span>
   </div>
 
@@ -194,12 +186,7 @@
 
   <div class="rule" aria-hidden="true">
     <span class="line"></span>
-    <span class="spiral">
-      <svg viewBox="-6.8 -10.55 19.6 19.6" xmlns="http://www.w3.org/2000/svg" fill="none">
-        <path d="M0 0a3 3 0 0 1 6 0a4.5 4.5 0 0 1-9 0a6 6 0 0 1 12 0a7.5 7.5 0 0 1-15 0a9 9 0 0 1 18 0"
-              stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-      </svg>
-    </span>
+    <span class="spiral"><svg width="20" height="20" viewBox="-6.8 -10.55 19.6 19.6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#9e3427" stroke-width="1.8" stroke-linecap="round"><path d="M0 0a3 3 0 0 1 6 0a4.5 4.5 0 0 1-9 0a6 6 0 0 1 12 0a7.5 7.5 0 0 1-15 0a9 9 0 0 1 18 0"/></svg></span>
     <span class="line"></span>
   </div>
 
