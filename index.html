@@ -76,22 +76,26 @@
   }
 
   /* A rule with a point of contact in the middle. */
+   /* A rule with a point of contact in the middle. */
   .rule {
     display: flex;
     align-items: center;
     gap: .8em;
     color: var(--faded);
-    margin: 3rem 0;
+    margin: 3rem auto;
+    width: 100%;
+    max-width: 38rem;
     user-select: none;
   }
   .rule span {
     flex: 1;
-    overflow: hidden;
-    white-space: nowrap;
-    letter-spacing: .16em;
+    border-top: 1px solid currentColor;
   }
-  .rule span:first-child { text-align: right; }
-  .rule .dot { flex: none; overflow: visible; }
+  .rule .dot {
+    flex: none;
+    border: 0;
+    line-height: 1;
+  }
 
   /* Below the rule: a note added at the foot of the page, typed lighter. */
   .note {
@@ -179,7 +183,7 @@
   <p class="stanza">
     We welcome any absorption practice:<br>
     yoga, thai-chi, martial and visual arts,<br>
-    poetry, jazz, contemporary dance and theater 
+    poetry, jazz, contemporary dance, theater 
   </p>
   <p class="cont" aria-hidden="true">…</p>
 
