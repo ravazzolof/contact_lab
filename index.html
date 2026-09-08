@@ -5,12 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CLAB — the Contact LAB, Amsterdam</title>
 <meta name="description" content="A laboratory for research on contact improvisation. Amsterdam, 2026.">
-
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
 <style>
   :root {
     --desk:   #d6d3ca;
@@ -19,10 +17,8 @@
     --faded:  #6f6b62;
     --ribbon: #9e3427;
   }
-
   *, *::before, *::after { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
-
   body {
     margin: 0;
     background: var(--desk);
@@ -34,7 +30,6 @@
     justify-content: center;
     padding: 3rem 1rem;
   }
-
   .sheet {
     background: var(--paper);
     width: 100%;
@@ -45,10 +40,8 @@
     flex-direction: column;
     min-height: calc(100vh - 6rem);
   }
-
   /* Typed pages are never justified — ragged right is the point. */
   p { text-align: left; margin: 0 0 1.9rem; }
-
   h1 {
     font-size: 1.55rem;
     font-weight: 700;
@@ -57,16 +50,13 @@
     margin: 0 0 .3rem;
     text-shadow: 0 0 .7px currentColor; /* faint ink bleed into paper */
   }
-
   .logo { display: block; width: 400px; max-width: 100%; height: auto; margin: 0 0 .5rem -6px; }
-
   .dateline {
     color: #8a867e;
     font-size: .8rem;
     letter-spacing: .22em;
     margin: 0 0 3.5rem 2px;
   }
-
   /* Each stanza ends in an ellipsis: the research is ongoing. */
   .stanza { margin: 0 0 .4rem; }
   .cont {
@@ -74,9 +64,8 @@
     margin: 0 0 1.9rem;
     user-select: none;
   }
-
-  /* A rule with a point of contact in the middle. */
-   /* A rule with a point of contact in the middle. */
+  /* A rule broken in the middle: a point of contact above, a spiral below.
+     Kept narrower than the logo so it never competes with it. */
   .rule {
     display: flex;
     align-items: center;
@@ -84,26 +73,31 @@
     color: var(--faded);
     margin: 3rem auto;
     width: 100%;
-    max-width: 35rem;
+    max-width: 21rem; /* 336px — the logo is 400px */
     user-select: none;
   }
-  .rule span {
+  .rule .line {
     flex: 1;
     border-top: 1px solid currentColor;
   }
-   .rule .dot {
+  .rule .dot {
     flex: none;
-    border: 0;
+    width: .34em;
+    height: .34em;
+    border-radius: 50%;
+    background: var(--ribbon);
+  }
+  .rule .spiral {
+    flex: none;
     display: flex;
     align-items: center;
     color: var(--ribbon);
   }
-  .rule .dot svg {
+  .rule .spiral svg {
     display: block;
-    width: 1.1em;
-    height: 1.1em;
+    width: 1.15em;
+    height: 1.15em;
   }
-
   /* Below the rule: a note added at the foot of the page, typed lighter. */
   .note {
     font-size: .88em;
@@ -112,12 +106,9 @@
   }
   .note a { color: #a8655c; }
   .note a:hover { color: var(--ink); }
-
   .ask { margin: 0 0 .6rem; }
-
   ol { margin: 0 0 1.9rem; padding-left: 2.4ch; }
   li { margin-bottom: .2rem; }
-
   a {
     color: var(--ribbon);
     text-decoration: underline;
@@ -130,12 +121,9 @@
     outline-offset: 3px;
     text-decoration: none;
   }
-
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-
   .note { margin-top: auto; }
   footer { padding-top: 2.5rem; }
-
   .links {
     list-style: none;
     margin: 0;
@@ -144,13 +132,11 @@
     flex-wrap: wrap;
     gap: .2rem 2.5rem;
   }
-
   .colophon {
     color: var(--faded);
     font-size: .85rem;
     margin: 1.6rem 0 0;
   }
-
   @media (max-width: 700px) {
     body { padding: 0; background: var(--paper); font-size: 15px; }
     .sheet { padding: 3rem 1.5rem 2rem; box-shadow: none; min-height: 100vh; }
@@ -160,79 +146,73 @@
 </style>
 </head>
 <body>
-
 <main class="sheet">
-
-<img class="logo" src="logo_full.svg" alt="CLAB — the Amsterdam Contact Lab" width="400" height="149">
+  <img class="logo" src="logo_full.svg" alt="CLAB — the Amsterdam Contact Lab" width="400" height="149">
   <h1 class="sr">CLAB: the Contact LAB</h1>
 
   <div class="rule" aria-hidden="true">
-    <span></span>
-    <span class="dot">·</span>
-    <span></span>
+    <span class="line"></span>
+    <span class="dot"></span>
+    <span class="line"></span>
   </div>
-  
+
   <p class="stanza">
     We research contact improvisation:<br>
     define questions, experiments, scores,<br>
     observe, share, integrate and repeat
   </p>
   <p class="cont" aria-hidden="true">…</p>
-
   <p class="stanza">
     We follow what is alive in us.<br>
     Where does the movement come from?<br>
     How does intention change touch?
   </p>
   <p class="cont" aria-hidden="true">…</p>
-
   <p class="stanza">
     We listen to all that is available:<br>
     our senses, limbs, organs, brains,<br>
     objects, colors, lights, instruments
   </p>
   <p class="cont" aria-hidden="true">…</p>
-
   <p class="stanza">
     We welcome any absorption practice:<br>
     yoga, thai-chi, martial and visual arts,<br>
-    poetry, jazz, dance, theater 
+    poetry, jazz, dance, theater
   </p>
   <p class="cont" aria-hidden="true">…</p>
-
   <p class="stanza">
     We are all both teachers and students,<br>
     share responsibility for each other<br>
     and progress together, as one
   </p>
   <p class="cont" aria-hidden="true">…</p>
-
   <p class="stanza">
     We are inquisitive, diverse bodies,<br>
     drawn to deep psychological, social,<br>
     and, why not, political transformation.
   </p>
 
-   <span class="dot">
+  <div class="rule" aria-hidden="true">
+    <span class="line"></span>
+    <span class="spiral">
       <svg viewBox="-6.8 -10.55 19.6 19.6" xmlns="http://www.w3.org/2000/svg" fill="none">
         <path d="M0 0a3 3 0 0 1 6 0a4.5 4.5 0 0 1-9 0a6 6 0 0 1 12 0a7.5 7.5 0 0 1-15 0a9 9 0 0 1 18 0"
-              stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
       </svg>
     </span>
-  
+    <span class="line"></span>
+  </div>
+
   <section class="note">
     <p>
       Does it resonate? Join us. Some experience is required, but dedication and curiosity are as important.
       Send an email to
       <a href="mailto:amsterdam.contact.lab@gmail.com">amsterdam.contact.lab@gmail.com</a>
     </p>
-
     <footer>
       <p class="colophon">No trackers, no cookies.</p>
     </footer>
   </section>
-
 </main>
-
 </body>
 </html>
